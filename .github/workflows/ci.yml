@@ -22,8 +22,8 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Install yarn
-        run: npm i -g yarn
+      - name: Install pnpm
+        run: npm i -g pnpm
 
       - name: Install dependencies
         run: make
@@ -32,7 +32,7 @@ jobs:
         run: forge config
         
       - name: Check contracts are linted
-        run: yarn lint:check
+        run: pnpm lint:check
 
       - name: Run tests
         run: make test
